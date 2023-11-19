@@ -4,12 +4,23 @@ import UsersTable from './UsersTable';
 import { Users } from "../../data"
 import Input from '../ui/Input';
 import styles from './UsersList.module.css';
+import Loader from '../ui/Loader';
 
 const UsersList: React.FC = () => {
   const [searchTerms, setSearchTerms] = useState<string[]>([]);
   const [showBox, setShowBox] = useState<boolean>(false);
+  const [laoding, setLoading] = useState<boolean>(false);
 
-  const handleBox = () => setShowBox(!showBox)
+  const handleBox = () => {
+    if (!showBox) {
+      // Add setTimeout just to delay and show loading
+      setLoading(true);
+      setTimeout(() => {
+          setShowBox(true)
+          setLoading(false);
+       } , 1000)
+    }
+  }
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -40,8 +51,11 @@ const UsersList: React.FC = () => {
             onChange={handleSearch}
             onClick={handleBox}
         />
+
+        {laoding && <Loader/>}
+
         <div className={styles.searchTermContainer}>
-           {searchTerms.map((term, index) => (
+           {searchTerms.filter(Boolean).map((term, index) => (
             <span
                key={index} 
                className={styles.searchTerm}

@@ -1,6 +1,29 @@
-.container {
+.searchContainer {
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 1rem;
+   flex-flow: column;
+}
+
+.searchTermContainer {
+   max-width: 350px;
+   padding: 0.5rem;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.searchTerm {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--clr-gray200);
+   padding: 0.4rem;
+   margin-left: 0.1rem;
+   border-radius: 1rem;
+   color: var(--clr-gray700);
+}
+
+.searchTerm:hover {
+   cursor: pointer;
 }

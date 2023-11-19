@@ -1,3 +1,5 @@
+@import '../../assets/styles/colors.css';
+
 .container {
     background-color: white;
     width: 800px;
@@ -32,7 +34,7 @@ td img {
     height: 60px;
     width: 60px;
     border-radius: 100%;
-    border: 5px solid #e6e7e8;
+    border: 5px solid var(--clr-gray200);
 }
 
 tr:nth-child(even) {
@@ -46,7 +48,7 @@ tr:nth-child(odd) {
 tr:hover td {
     color: #44b478;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 td button {

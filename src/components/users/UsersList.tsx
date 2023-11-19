@@ -5,9 +5,7 @@ import { Users } from "../../data"
 import Input from '../ui/Input';
 import styles from './UsersList.module.css';
 
-
 const UsersList: React.FC = () => {
-  // const [selectedOptions, setSelectedOptions] = useState<any[]>([]);
   const [searchTerms, setSearchTerms] = useState<string[]>([]);
   const [showBox, setShowBox] = useState<boolean>(false);
 
@@ -15,16 +13,9 @@ const UsersList: React.FC = () => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    const terms = inputValue.split(' ');
+    const terms = inputValue.split(" ");
     setSearchTerms(terms);
   };
-
-  // const handleSelectOption = (option: any) => {
-  //   if (!selectedOptions.includes(option)) {
-  //     setSelectedOptions([...selectedOptions, option]);
-  //     setSearchTerms([]);
-  //   }
-  // };
 
   const handleRemoveSearchTerm = (index: number) => {
     const updatedTerms = [...searchTerms];
@@ -39,28 +30,30 @@ const UsersList: React.FC = () => {
   };
 
   const filteredOptions = Users.filter(filterOptions);
-
   return (
-    <div>
-      <div className={styles.container}>
-        {searchTerms.map((term, index) => (
-          <span key={index} className="search-term">
-            {term}
-            <FaTimes onClick={() => handleRemoveSearchTerm(index)} />
-          </span>
-        ))}
-
+    <>
+      <div className={styles.searchContainer}>
         <Input
             type="text"
-            placeholder="Search options..."
+            placeholder="Search names..."
             value={searchTerms.join(' ')}
             onChange={handleSearch}
             onClick={handleBox}
         />
+        <div className={styles.searchTermContainer}>
+           {searchTerms.map((term, index) => (
+            <span
+               key={index} 
+               className={styles.searchTerm}
+               >
+              <FaTimes onClick={() => handleRemoveSearchTerm(index)} />
+              {term}
+           </span>
+            ))}
+        </div>
       </div>
-    
       { showBox && <UsersTable items={filteredOptions}/> }
-    </div>
+    </>
   );
 };
 

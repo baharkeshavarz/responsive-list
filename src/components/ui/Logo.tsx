@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './navbar/NavBar.module.css';
+import styles from '../navbar/NavBar.module.css';
 
 const Logo: React.FC = () => {
   return (
     <div>
       <img 
-          src={require("../assets/images/logo.png")}   
+          src={require("../../assets/images/logo.png")}   
           alt="Logo" 
           className={styles.logo}
       />

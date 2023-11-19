@@ -4,7 +4,7 @@ export const Users = [
       "name": "Bahar",
       "username": "Bahar",
       "email": "bahar@gmail.com",
-      "photo": "https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_",
+      "photo": "user1.jpg",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -28,7 +28,7 @@ export const Users = [
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
-      "photo": "https://drive.google.com/uc?export=view&id=1KV8Ob2wXIcobIvayGGDB1qUpQn_iZKIp",
+      "photo": "user2.jpg",
       "address": {
         "street": "Victor Plains",
         "suite": "Suite 879",
@@ -52,7 +52,7 @@ export const Users = [
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
-      "photo": "https://drive.google.com/uc?export=view&id=1ock7haLmYaAbHe8yn9H8ZGgkaGY9lcB0",
+      "photo": "user3.jpg",
       "address": {
         "street": "Douglas Extension",
         "suite": "Suite 847",
@@ -76,7 +76,7 @@ export const Users = [
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
-      "photo": "https://drive.google.com/uc?export=view&id=1MbkS3AwaCNaKfMTmCQMHD1okQEubCdnt",
+      "photo": "user4.jpg",
       "address": {
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
@@ -100,7 +100,7 @@ export const Users = [
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
-      "photo": "https://drive.google.com/uc?export=view&id=1oztRYJUSZ5txDbaAAGg0O8_Ek6nzLAId",
+      "photo": "user5.jpg",
       "address": {
         "street": "Skiles Walks",
         "suite": "Suite 351",
@@ -124,7 +124,7 @@ export const Users = [
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
-      "photo": "https://drive.google.com/uc?export=view&id=1ysB5QChCSLpz3igUoDzalENFsjJEe8H7",
+      "photo": "user6.jpg",
       "address": {
         "street": "Norberto Crossing",
         "suite": "Apt. 950",
@@ -148,7 +148,7 @@ export const Users = [
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
-      "photo": "https://drive.google.com/uc?export=view&id=1fCtvhYFy1roieanYeXua1jKJyfUhiDS6",
+      "photo": "user7.jpg",
       "address": {
         "street": "Rex Trail",
         "suite": "Suite 280",
@@ -172,7 +172,7 @@ export const Users = [
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
-      "photo": "https://drive.google.com/uc?export=view&id=1ZHPBm7fBxfbW2qV8pLTeDvMreXzqcW-x",
+      "photo": "user3.jpg",
       "address": {
         "street": "Ellsworth Summit",
         "suite": "Suite 729",
@@ -196,7 +196,7 @@ export const Users = [
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
-      "photo": "https://drive.google.com/uc?export=view&id=1oztRYJUSZ5txDbaAAGg0O8_Ek6nzLAId",
+      "photo": "user7.jpg",
       "address": {
         "street": "Dayna Park",
         "suite": "Suite 449",
@@ -220,7 +220,7 @@ export const Users = [
       "name": "Clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
-      "photo": "https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_",
+      "photo": "user6.jpg",
       "address": {
         "street": "Kattie Turnpike",
         "suite": "Suite 198",

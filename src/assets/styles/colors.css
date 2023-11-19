@@ -8,6 +8,8 @@
     --clr-primary-dark: rgb(0, 64, 103);
     --clr-gray100: #f0f7f8;
     --clr-gray200: #cfd8dc;
+    --clr-gray700: #545454;
+
       /*   border radius */
     --radius: 0.2rem;
   }

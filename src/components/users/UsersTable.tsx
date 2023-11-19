@@ -27,13 +27,14 @@ const UsersTable = ({
                   <td>{user.id}</td>
                   <td>
                     <img 
-                      src={user.photo}
+                      src={require(`../../assets/images/users/${user.photo}`)}   
                       alt={user.name}
+                      className={styles.photo}
                     />
                   </td>
-                  <td>{user.username}</td>
+                  <td>{user.name}</td>
                   <td>{user.email}</td>
-                  <td>{user.username}</td>
+                  <td>{`${user.address.city}-${user.address.street}`}</td>
                   <td><button>View</button></td>
               </tr>
               ))}

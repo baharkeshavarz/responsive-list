@@ -51,9 +51,7 @@ const UsersList: React.FC = () => {
             onChange={handleSearch}
             onClick={handleBox}
         />
-
         {laoding && <Loader/>}
-
         <div className={styles.searchTermContainer}>
            {searchTerms.filter(Boolean).map((term, index) => (
             <span

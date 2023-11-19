@@ -1,7 +1,7 @@
-import Footer from './components/footer/Footer';
+import Footer from './components/layout/footer/Footer';
 import UsersList from './components/users/UsersList';
-import NavBar from './components/navbar/NavBar';
-import Container from './components/layout/Container';
+import NavBar from './components/layout/navbar/NavBar';
+import Container from './components/layout/container/Container';
 
 function App() {
   return (

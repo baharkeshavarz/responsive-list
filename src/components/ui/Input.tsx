@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
       ...props
      }) => {
   return (
-    <div>
+    <>
       {label && <label htmlFor={label}> {label} </label>}
       <input
           type={type}
@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({
           className={styles.search}
           {...props}
        />
-    </div>
+    </>
   );
 };
 

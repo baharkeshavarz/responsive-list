@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../navbar/NavBar.module.css';
+import styles from './UI.module.css';
 
 const Logo: React.FC = () => {
   return (

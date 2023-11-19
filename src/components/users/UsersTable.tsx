@@ -1,45 +1,34 @@
+import { prepareUsers } from '../../lib';
 import { User } from '../../types';
+import Table from '../ui/table/Table';
+import TableHeading from '../ui/table/TableHeading';
+import TableRow from '../ui/table/TableRow';
 import styles from './UsersTable.module.css';
 
 interface UsersTableProps {
     items: User[],
 }
+const headings = ['No.', 'Image', 'Name', 'Email', 'Username',"birthData"];
 
 const UsersTable = ({
      items,
     }: UsersTableProps) => {
   return (
     <div className={styles.container}>
-      <table>
-          <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>Action</th>
-                </tr>
-          </thead>
+      <Table>
+          <TableHeading headings={headings}/>
           <tbody>
-              {items.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>
-                    <img 
-                      src={require(`../../assets/images/users/${user.photo}`)}   
-                      alt={user.name}
-                      className={styles.photo}
-                    />
-                  </td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{`${user.address.city}-${user.address.street}`}</td>
-                  <td><button>View</button></td>
-              </tr>
-              ))}
+              {items.map((rowData, index) => {
+                return (
+                         <TableRow
+                               key={index}
+                               rowData={prepareUsers(rowData)}
+                          />
+                     )
+                 }
+              )}
           </tbody>
-      </table>
+      </Table>
     </div>
   )
 }

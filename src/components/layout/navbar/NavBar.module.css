@@ -1,4 +1,4 @@
-@import '../../assets/styles/colors.css';
+@import '../../../assets/styles/colors.css';
 
 .container {
   background-color: var(--background);
@@ -6,11 +6,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-}
-
-.logo {
-  width: 3rem;
-  height: 3rem;
 }
 
 .navbar {
@@ -24,6 +19,7 @@
   list-style: none;
   margin-right: 2rem;
   color: #fff;
+  font-size: 0.9rem;
 }
 
 .navbar li a {
@@ -43,7 +39,6 @@
 
 .btnPrimary {
   font-family: Montserrat, sans-serif;
-  font-size: 1rem;
   background: var(--clr-primary);
   border: none;
   outline: none;
@@ -55,4 +50,12 @@
 
 .btnPrimary:hover {
   background: var(--clr-primary-hover);
+}
+
+
+@media (max-width: 600px) {
+  .navbar li{
+    margin-right: 0.3rem;
+    font-size: 0.9rem;
+  }
 }

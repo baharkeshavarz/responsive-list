@@ -1,4 +1,4 @@
-@import '../../assets/styles/colors.css';
+@import '../../../assets/styles/colors.css';
 
 .footer {
     background-color: var(--background);
@@ -6,6 +6,7 @@
     padding: 0.5rem;
     margin-top: 1rem;
     color: #FFF;
+    font-size: 0.9rem;
     border-top: 1px solid #e5e5e5;
     justify-content: center;
   }

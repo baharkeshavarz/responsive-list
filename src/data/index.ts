@@ -1,9 +1,9 @@
 export const Users = [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
+      "name": "Bahar",
+      "username": "Bahar",
+      "email": "bahar@gmail.com",
       "photo": "https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_",
       "address": {
         "street": "Kulas Light",

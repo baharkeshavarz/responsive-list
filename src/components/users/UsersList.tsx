@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import UsersTable from './UsersTable';
 import { Users } from "../../data"
+import Input from '../ui/Input';
+import styles from './UsersList.module.css';
 
 
 const UsersList: React.FC = () => {
-  const [selectedOptions, setSelectedOptions] = useState<any[]>([]);
+  // const [selectedOptions, setSelectedOptions] = useState<any[]>([]);
   const [searchTerms, setSearchTerms] = useState<string[]>([]);
   const [showBox, setShowBox] = useState<boolean>(false);
 
@@ -17,12 +19,12 @@ const UsersList: React.FC = () => {
     setSearchTerms(terms);
   };
 
-  const handleSelectOption = (option: any) => {
-    if (!selectedOptions.includes(option)) {
-      setSelectedOptions([...selectedOptions, option]);
-      setSearchTerms([]); // Clear search terms when an option is selected
-    }
-  };
+  // const handleSelectOption = (option: any) => {
+  //   if (!selectedOptions.includes(option)) {
+  //     setSelectedOptions([...selectedOptions, option]);
+  //     setSearchTerms([]);
+  //   }
+  // };
 
   const handleRemoveSearchTerm = (index: number) => {
     const updatedTerms = [...searchTerms];
@@ -40,7 +42,7 @@ const UsersList: React.FC = () => {
 
   return (
     <div>
-      <div className="input-container">
+      <div className={styles.container}>
         {searchTerms.map((term, index) => (
           <span key={index} className="search-term">
             {term}
@@ -48,21 +50,16 @@ const UsersList: React.FC = () => {
           </span>
         ))}
 
-        <input
-          type="text"
-          placeholder="Search options..."
-          value={searchTerms.join(' ')}
-          onChange={handleSearch}
-          onClick={handleBox}
+        <Input
+            type="text"
+            placeholder="Search options..."
+            value={searchTerms.join(' ')}
+            onChange={handleSearch}
+            onClick={handleBox}
         />
       </div>
     
-      {showBox && 
-           <UsersTable
-                items={filteredOptions} 
-                handleSelectOption={handleSelectOption} 
-            />
-      }
+      { showBox && <UsersTable items={filteredOptions}/> }
     </div>
   );
 };

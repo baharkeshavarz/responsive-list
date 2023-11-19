@@ -2,7 +2,11 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <div className={styles.container}>Footer</div>
+    <footer>
+      <div className={styles.footer}>
+         <p>&copy; 2023 Something. All rights reserved.</p>
+       </div>
+   </footer>
   )
 }
 

@@ -1,0 +1,14 @@
+:root {
+   /*  main colors */
+    --background: #000;
+
+  /*   color variables */
+    --clr-primary: #2fadf7;
+    --clr-primary-hover: #9fd9fb;
+    --clr-primary-dark: rgb(0, 64, 103);
+    --clr-gray100: #f0f7f8;
+    --clr-gray200: #cfd8dc;
+      /*   border radius */
+    --radius: 0.2rem;
+  }
+  

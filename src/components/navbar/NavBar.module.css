@@ -1,3 +1,58 @@
+@import '../../assets/styles/colors.css';
+
 .container {
-    background-color: bisque;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar {
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar li{
+  list-style: none;
+  margin-right: 2rem;
+  color: #fff;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  transition: all 200ms ease-in;
+}
+
+.navbar li a:hover {
+  color: var(--clr-primary-hover);
+}
+
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+.btnPrimary {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  background: var(--clr-primary);
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.btnPrimary:hover {
+  background: var(--clr-primary-hover);
 }

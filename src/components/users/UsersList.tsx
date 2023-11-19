@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import UsersTable from './UsersTable';
+import { Users } from "../../data"
 
-
-const options = [
-    { id: 1, label: 'Option 1' },
-    { id: 2, label: 'Option 2' },
-    { id: 3, label: 'Option 3' },
-  ];
 
 const UsersList: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<any[]>([]);
@@ -37,11 +32,11 @@ const UsersList: React.FC = () => {
 
   const filterOptions = (option: any) => {
     return searchTerms.length === 0 || searchTerms.some(
-      (term) => option.label.toLowerCase().includes(term.toLowerCase())
+      (term) => option.name.toLowerCase().includes(term.toLowerCase())
     );
   };
 
-  const filteredOptions = options.filter(filterOptions);
+  const filteredOptions = Users.filter(filterOptions);
 
   return (
     <div>
@@ -62,10 +57,12 @@ const UsersList: React.FC = () => {
         />
       </div>
     
-      {showBox && <UsersTable items={filteredOptions} handleSelectOption={handleSelectOption} />}
-
-
-     
+      {showBox && 
+           <UsersTable
+                items={filteredOptions} 
+                handleSelectOption={handleSelectOption} 
+            />
+      }
     </div>
   );
 };
